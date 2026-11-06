@@ -51,7 +51,7 @@ produtosLocalStorage.map((produto, index) => `
     <tr>
         <td>${produto.nome}</td>
 
-        <td>R$ ${Number(produto.preco)}</td>
+        <td>R$ ${Number(produto.preco).toFixed(2).replace(".",",")}</td>
 
         <td>${produto.categoria}</td>
 
