@@ -1,0 +1,106 @@
+.catalogo {
+    width: 100%;
+    padding: 20px;
+}
+
+.produtos {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+
+.produto-card {
+    width: 100%;
+    min-width: 0;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: white;
+}
+
+
+.produto-card .card-body {
+    padding: 20px;
+}
+.h5{
+    color: green;
+}
+
+.button {
+    background-color: green;
+    border: none;
+}
+
+.button:hover {
+
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.16);
+    transform: translateY(-3px);
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+
+    outline: none;
+    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.16);
+}
+
+
+.card:hover {
+
+    box-shadow: 0 6px 9px rgba(0, 0, 0, 0.16);
+    transform: translateY(0px);
+    transition: all 0.4s ease;
+}
+
+@media (max-width: 992px) {
+    .produtos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+@media (max-width: 576px) {
+    .produtos {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Organização do painel */
+.admin-layout {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 30px;
+    align-items: start;
+    padding: 15px;
+}
+
+/* Formulário */
+.formulario-admin {
+    padding: 25px;
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* Lista de produtos */
+.lista-admin {
+    padding: 25px;
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    min-width: 0;
+}
+
+/* Títulos */
+.formulario-admin h4,
+.lista-admin h4 {
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+    .admin-layout {
+        grid-template-columns: 1fr;
+    }
+}

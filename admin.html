@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-bs-theme="light">
+
+<head>
+    <meta name="description" content="Página inicial da Mercearia da Proz">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/img/store.png" type="image/x-icon">
+    <title>Mercado Proz - Catálogo</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar md:navbar-expand bg-1 rounded-5 shadow-sm">
+            <div class="container-fluid">
+
+                <a class="navbar-brand" href="#">
+                    <img src="assets/img/store.png" width="50" height="50" alt="Logo da Mercearia Proz">
+                </a>
+
+                <div class="d-flex align-items-center gap-3 ms-auto">
+
+                    <a class="nav-link" href="index.html">
+                        Catálogo
+                    </a>
+
+                    <a class="nav-link fw-bold" href="admin.html">
+                        Administrador
+                    </a>
+
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+    <main class="container-fluid mt-4 ">
+
+        <section class="ms-5">
+            <h2 class="mb-4">Painel do Administrador</h2>
+
+            <label for="pesquisa" class="form-label fw-bold">Encontre seus produtos:</label>
+            <input class="form-control" style="max-width: 300px;" type="search" id="pesquisa"
+                placeholder="Pesquisar produtos..." aria-label="Pesquisar produtos">
+
+        </section>
+
+
+
+
+        <div class="admin-layout">
+
+            <section class="formulario-admin">
+                <h4>Cadastro de produtos</h4>
+
+                <form id="formCadastro">
+
+                    <div class="mb-3">
+                        <label for="nome" class="form-label">Nome do Produto</label>
+                        <input type="text" class="form-control" id="nome" placeholder="Digite o nome" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="preco" class="form-label">Preço do Produto</label>
+                        <input type="number" step="0.01" min="0" class="form-control" id="preco" placeholder="Ex: 8.50"
+                            required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="categoria" class="form-label">Categoria do Produto</label>
+                        <input type="text" class="form-control" id="categoria" placeholder="Ex: Alimentos" required>
+                    </div>
+
+                    <div class="d-flex gap-2">
+                        <button type="reset" class="theme-primary btn-solid btn-styled">
+                            Limpar
+                        </button>
+
+                        <button type="submit" class="theme-success btn-solid btn-styled">
+                            Salvar produto
+                        </button>
+                    </div>
+
+                </form>
+            </section>
+
+            <!-- TABELA À DIREITA -->
+            <section class="lista-admin">
+                <h4>Produtos cadastrados</h4>
+
+                <div class="table-responsive">
+                    <table class="table table-hover table-bordered align-middle">
+                        <thead class="table-success">
+                            <tr>
+                                <th>Nome</th>
+                                <th>Preço</th>
+                                <th>Categoria</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="itens">
+                            <!-- Produtos inseridos pelo JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+
+    <script src="assets/js/scriptAdmin.js"></script>
+    <script src="assets/js/pesquisaAdmin.js"></script>
+</body>
+
+</html>
