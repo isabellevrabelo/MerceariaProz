@@ -9,7 +9,7 @@ listaProdutos.innerHTML =
 produtosLocalStorage.map((produto) => `
     <article>
         <h3>Nome: ${produto.nome}</h3>
-        <p>Preço: R$ ${produto.preco}</p>
+        <p>R$ ${Number(produto.preco).toFixed(2).replace(".",",")}</p>
         <p>Categoria: ${produto.categoria}</p>
     </article>
     <hr>
